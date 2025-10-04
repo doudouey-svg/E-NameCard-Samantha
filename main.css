@@ -169,6 +169,7 @@ img {
   .profile-pic {
     max-height: 100px;
     max-width: 120px;
+     margin-top: -20px;
   }
 
   .text-block {
