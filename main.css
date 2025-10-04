@@ -35,6 +35,13 @@ img {
   background-repeat: no-repeat;
 }
 
+.main-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* --- Containers --- */
 .container {
   max-width: 1200px;
