@@ -1,161 +1,174 @@
 /* --- Global --- */
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 section {
-    display: block;
-    padding: 0 0.5rem;
+  display: block;
+  padding: 0;
 }
 
 p {
-    margin: 0.25rem !important;
+  margin: 0.25rem !important;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* --- Container / Row / Column --- */
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-}
-
-.col {
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 0;
-    padding: 0.25rem;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* --- Banner --- */
 .main-banner {
-    width: 100%;
-    min-height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 100%;
+  min-height: 400px;
+  background-image: url('Linkedin Banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Containers --- */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 /* --- Primary Info --- */
 .primary-info {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .name-title-company {
-    display: flex;
-    justify-content: flex-start; /* left aligned */
-    align-items: center;
-    gap: 20px;
-}
-
-.text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* reduce space between profile pic and text */
 }
 
 .image-block {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  flex: 0 0 auto;
+}
+
+.text-block {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-pic {
-    max-height: 150px;
-    max-width: 150px;
-    object-fit: cover;
+  max-height: 150px;
+  max-width: 150px;
+  object-fit: cover;
 }
 
-/* --- Secondary Info Rows --- */
-.secondary-info .row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.secondary-info .icon-col {
-    flex: 0 0 auto; /* icon fixed size */
-}
-
-.secondary-info .text-col {
-    flex: 1 1 auto; /* text takes remaining space */
-    display: flex;
-    align-items: center;
-}
-
-/* --- Texts --- */
 .text-name {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #333333;
-    font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #333333;
+  font-size: 20px;
 }
 
 .text-title-company {
-    font-family: 'Lato', sans-serif;
-    font-weight: 200;
-    color: #333333;
-    font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  color: #333333;
+  font-size: 12px;
+}
+
+/* --- Secondary Info --- */
+.secondary-info {
+  background-color: white;
+  padding: 10px 0;
+}
+
+.secondary-info .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.secondary-info .icon-col {
+  flex: 0 0 auto;
+}
+
+.secondary-info .text-col {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
 }
 
 .text-detail {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #575757;
-    font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #575757;
+  font-size: 12px;
+}
+
+.secondary-info img[alt="Right Arrow"] {
+  max-width: 20px;
+  height: auto;
 }
 
 /* --- Bottom Button --- */
 .bottom {
-    height: auto;
-    padding: 20px 0;
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .button {
-    background-color: #219653;
-    height: 48px;
-    padding: 0 24px;
-    text-align: center;
-    line-height: 48px;
-    font-family: 'Muli', sans-serif;
-    color: white;
-    font-weight: 300;
+  background-color: #219653;
+  height: 48px;
+  padding: 0 24px;
+  text-align: center;
+  line-height: 48px;
+  font-family: 'Muli', sans-serif;
+  color: white;
+  font-weight: 300;
+  display: inline-block;
 }
 
 /* --- Responsive --- */
 @media (max-width: 1200px) {
-    .text-block { font-size: 1.7rem; }
-    .profile-pic { max-height: 120px; }
+  .profile-pic {
+    max-height: 120px;
+  }
+
+  .text-block {
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .name-title-company {
-        flex-direction: column;
-        align-items: flex-start;  /* left aligned on mobile */
-        text-align: left;
-        gap: 15px;
-    }
-    .text-block { font-size: 1.2rem; }
-    .profile-pic { max-height: 100px; max-width: 120px; }
-    .main-banner { min-height: 250px; }
+  .name-title-company {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .profile-pic {
+    max-height: 100px;
+    max-width: 120px;
+  }
+
+  .text-block {
+    font-size: 1.2rem;
+  }
+
+  .main-banner {
+    min-height: 250px;
+  }
 }
