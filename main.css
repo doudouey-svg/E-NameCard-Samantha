@@ -33,12 +33,9 @@ img {
 }
 
 img.profile-pic {
-	width: 150px;       /* or % based if you prefer */
-    height: 150px;
-    border-radius: 50%; /* perfect circle */
-    object-fit: cover;  /* ensures the image doesn't stretch */
-    display: block;
-    margin: auto;  
+	height: 100%;       /* match the height of the text-block */
+    width: auto;        /* maintain aspect ratio */
+    object-fit: cover; 
 }
 
 .container {
@@ -121,9 +118,23 @@ img.profile-pic {
 }
 
 .name-title-company {
-	height: 100%;
+	display: flex;
+    align-items: stretch; /* make both columns same height */
 }
 
+/* Text block remains normal */
+.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center text */
+}
+
+/* Image block aligns image to fill height of text block */
+.image-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .banner {
 	height: 30%;
 }
