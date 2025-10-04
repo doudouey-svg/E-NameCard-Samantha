@@ -85,22 +85,26 @@ img {
     object-fit: cover;
 }
 
-/* --- Secondary Info Rows --- */
+/* Secondary info row */
 .secondary-info .row {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
 }
 
-.secondary-info .icon-col img {
-    max-width: 40px;
-    max-height: 40px;
+/* Icon column */
+.secondary-info .icon-col {
+    flex: 0 0 auto;  /* keep icon fixed size */
 }
 
+/* Text column */
 .secondary-info .text-col {
-    flex-grow: 1;  /* text takes remaining space */
+    flex: 1 1 auto;  /* take all remaining space */
+    display: flex;
+    align-items: center;   /* vertically center the text */
 }
+
+
 
 /* --- Texts --- */
 .text-name {
