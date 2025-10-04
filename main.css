@@ -149,7 +149,6 @@ img {
 .main-banner {
     width: 100%;
     min-height: 400px;                  /* ensure enough vertical space on desktop */
-    background-image: url('Linkedin Banner.png');
     background-size: cover;             /* fill width, crop minimally */
     background-position: center;
     background-repeat: no-repeat;
