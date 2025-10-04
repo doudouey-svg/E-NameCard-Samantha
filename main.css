@@ -1,3 +1,53 @@
+/* --- Global --- */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+section {
+    display: block;
+    padding: 0 0.5rem;
+}
+
+p {
+    margin: 0.25rem !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* --- Container / Row / Column --- */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0.25rem;
+}
+
 /* --- Banner --- */
 .main-banner {
     width: 100%;
@@ -7,25 +57,19 @@
     background-repeat: no-repeat;
 }
 
-/* --- Profile Info Section --- */
+/* --- Profile Info --- */
 .primary-info {
-    padding: 20px;
-    margin-bottom: 20px;  /* extra spacing below to prevent overlap */
-}
-
-.name-title-company-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px 0;
+    margin-bottom: 20px; /* spacing below */
 }
 
 .name-title-company {
     display: flex;
     justify-content: space-between; /* text left, image right */
-    align-items: flex-start;        /* align text top with profile image */
+    align-items: flex-start;
     gap: 20px;
 }
 
-/* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
@@ -33,10 +77,9 @@
     font-size: 2rem;
 }
 
-/* Image block */
 .image-block {
     display: flex;
-    justify-content: flex-end;  /* pushes image to the right */
+    justify-content: flex-end; /* push image right */
 }
 
 .profile-pic {
@@ -45,7 +88,59 @@
     object-fit: cover;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Secondary Info Rows --- */
+.secondary-info .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.secondary-info .icon-col img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/* --- Texts --- */
+.text-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    font-size: 20px;
+}
+
+.text-title-company {
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color: #333333;
+    font-size: 12px;
+}
+
+.text-detail {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #575757;
+    font-size: 12px;
+}
+
+/* --- Bottom Button --- */
+.bottom {
+    height: auto;
+    padding: 20px 0;
+}
+
+.button {
+    background-color: #219653;
+    height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    line-height: 48px;
+    font-family: 'Muli', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+/* --- Responsive --- */
 @media (max-width: 1200px) {
     .text-block { font-size: 1.7rem; }
     .profile-pic { max-height: 120px; }
@@ -60,4 +155,5 @@
     }
     .text-block { font-size: 1.2rem; }
     .profile-pic { max-height: 100px; max-width: 150px; }
+    .main-banner { min-height: 250px; }
 }
