@@ -172,6 +172,11 @@ img {
 
   .main-banner {
     padding: 0;
-    min-height: 200px;
+    min-height: auto;
+  }
+  .main-banner img {
+  width: 100%;
+  height: auto; /* scale image naturally */
+  display: block;
   }
 }
