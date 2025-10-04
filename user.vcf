@@ -3,12 +3,12 @@ VERSION:3.0
 PRODID:-//Apple Inc.//iPhone OS 11.2.2//EN
 N:Lee;Samantha;;;
 FN: Samantha Lee
-ORG:GovTech1;
-TITLE:Associate Software Engineer\nProducts Team, Data Science Division
-EMAIL;type=INTERNET;type=WORK;type=pref:doudouey@gmail.com
-TEL;type=WORK;type=VOICE:+65 9123 8888
-item1.ADR;type=WORK;type=pref:;;Safra, 09-01;;;138888;Singapore
+ORG:Pollisum;
+TITLE:Technology Development Manager
+EMAIL;type=INTERNET;type=WORK;type=pref:samantha@pollisum.com
+TEL;type=WORK;type=VOICE:+65 9137 7584
+item1.ADR;type=WORK;type=pref:;;41 Senoko Way,;;;758053;Singapore
 item1.X-ABADR:sg
-item2.URL;type=pref:google.com
+item2.URL;type=pref:pollisum.com
 item2.X-ABLabel:_$!<HomePage>!$_
 END:VCARD
