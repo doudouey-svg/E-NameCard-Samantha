@@ -128,10 +128,14 @@ img.profile-pic {
 }
 
 .main-banner {
-  height: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    height: 300px; /* Set a fixed height for desktop */
+    background-image: url('Linkedin Banner.png');
+    background-size: cover;   /* ensures the image fills the banner */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;            /* optional: to center content */
+    align-items: center;      /* vertically center content */
+    justify-content: center;  /* horizontally center content */
 }
 
 
@@ -201,4 +205,8 @@ img.profile-pic {
     height: 80%;
     width: 80%;
   }
+@media screen (max-width: 768px) {
+	.main-banner {
+	height: 200px;
+	}
 }
