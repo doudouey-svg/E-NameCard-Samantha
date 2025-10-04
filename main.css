@@ -33,11 +33,12 @@ img {
 }
 
 img.profile-pic {
-	height: 150px;
-	width: 150px;
-	object-fit: cover;
-	border-radius: 50%;
-	margin-right: auto;  /* let it flex naturally */
+	width: 150px;       /* or % based if you prefer */
+    height: 150px;
+    border-radius: 50%; /* perfect circle */
+    object-fit: cover;  /* ensures the image doesn't stretch */
+    display: block;
+    margin: auto;  
 }
 
 .container {
@@ -128,14 +129,13 @@ img.profile-pic {
 }
 
 .main-banner {
-    height: 300px; /* Set a fixed height for desktop */
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/5;   /* keeps a nice wide banner ratio */
     background-image: url('Linkedin Banner.png');
-    background-size: cover;   /* ensures the image fills the banner */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;            /* optional: to center content */
-    align-items: center;      /* vertically center content */
-    justify-content: center;  /* horizontally center content */
 }
 
 
@@ -195,8 +195,8 @@ img.profile-pic {
 
 @media screen and (max-width: 600px) {
   img.profile-pic {
-    height: 60%;
-    width: 60%;
+    width: 100px;
+    height: 100px;
   }
 }
 
