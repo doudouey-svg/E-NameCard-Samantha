@@ -127,6 +127,14 @@ img.profile-pic {
 	height: 30%;
 }
 
+.main-banner {
+  height: 30%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 .primary-info {
 	height: 15%;
 }
