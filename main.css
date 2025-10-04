@@ -20,10 +20,8 @@ a {
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
 }
 
@@ -57,15 +55,14 @@ img {
     background-repeat: no-repeat;
 }
 
-/* --- Profile Info --- */
+/* --- Primary Info --- */
 .primary-info {
     padding: 20px 0;
-    margin-bottom: 20px; /* spacing below */
 }
 
 .name-title-company {
     display: flex;
-    justify-content: space-between; /* text left, image right */
+    justify-content: flex-start; /* left aligned */
     align-items: flex-start;
     gap: 20px;
 }
@@ -79,7 +76,7 @@ img {
 
 .image-block {
     display: flex;
-    justify-content: flex-end; /* push image right */
+    justify-content: flex-start; /* keep image to the right of text */
 }
 
 .profile-pic {
@@ -99,6 +96,10 @@ img {
 .secondary-info .icon-col img {
     max-width: 40px;
     max-height: 40px;
+}
+
+.secondary-info .text-col {
+    flex-grow: 1;  /* text takes remaining space */
 }
 
 /* --- Texts --- */
@@ -149,8 +150,8 @@ img {
 @media (max-width: 768px) {
     .name-title-company {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;  /* left aligned on mobile */
+        text-align: left;
         gap: 15px;
     }
     .text-block { font-size: 1.2rem; }
