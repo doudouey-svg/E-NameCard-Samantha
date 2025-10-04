@@ -1,4 +1,4 @@
-/* Banner only: no content inside */
+/* --- Banner --- */
 .main-banner {
     width: 100%;
     min-height: 400px;
@@ -7,33 +7,36 @@
     background-repeat: no-repeat;
 }
 
-/* Profile info section below banner */
+/* --- Profile Info Section --- */
 .primary-info {
-    padding: 20px 0;
+    padding: 20px;
+    margin-bottom: 20px;  /* extra spacing below to prevent overlap */
+}
+
+.name-title-company-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .name-title-company {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 30px;
+    justify-content: space-between; /* text left, image right */
+    align-items: flex-start;        /* align text top with profile image */
+    gap: 20px;
 }
 
 /* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 2rem;
 }
 
 /* Image block */
 .image-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;  /* pushes image to the right */
 }
 
 .profile-pic {
@@ -42,21 +45,19 @@
     object-fit: cover;
 }
 
-/* Responsive */
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .text-block { font-size: 1.7rem; }
+    .profile-pic { max-height: 120px; }
+}
+
 @media (max-width: 768px) {
     .name-title-company {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 15px;
     }
-    .text-block {
-        font-size: 1.2rem;
-    }
-    .profile-pic {
-        max-height: 100px;
-        max-width: 150px;
-    }
-    .main-banner {
-        min-height: 250px;
-    }
+    .text-block { font-size: 1.2rem; }
+    .profile-pic { max-height: 100px; max-width: 150px; }
 }
