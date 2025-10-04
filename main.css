@@ -37,6 +37,8 @@ img.profile-pic {
 	width: 50%;
 	object-fit: cover;
 	border-radius: 50%;
+	margin-left: 10px;   /* add left padding/margin */
+	margin-right: auto;  /* let it flex naturally */
 }
 
 .container {
