@@ -76,7 +76,7 @@ img {
 
 .image-block {
     display: flex;
-    justify-content: flex-start; /* keep image to the right of text */
+    justify-content: flex-start; /* image stays right of text */
 }
 
 .profile-pic {
@@ -85,26 +85,22 @@ img {
     object-fit: cover;
 }
 
-/* Secondary info row */
+/* --- Secondary Info Rows --- */
 .secondary-info .row {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Icon column */
 .secondary-info .icon-col {
-    flex: 0 0 auto;  /* keep icon fixed size */
+    flex: 0 0 auto; /* icon fixed size */
 }
 
-/* Text column */
 .secondary-info .text-col {
-    flex: 1 1 auto;  /* take all remaining space */
+    flex: 1 1 auto; /* take remaining space */
     display: flex;
-    align-items: center;   /* vertically center the text */
+    align-items: center; /* vertical center */
 }
-
-
 
 /* --- Texts --- */
 .text-name {
