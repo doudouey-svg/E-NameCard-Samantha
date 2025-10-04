@@ -1,33 +1,99 @@
-/* --- Banner --- */
+/* --- General Reset --- */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+section {
+    display: block;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: auto;
+}
+
+p {
+    margin: 0.25rem !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.col {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+/* Column sizes */
+.col.is-1 { flex: none; width: 10%; }
+.col.is-2 { flex: none; width: 20%; }
+.col.is-3 { flex: none; width: 30%; }
+.col.is-4 { flex: none; width: 40%; }
+.col.is-5 { flex: none; width: 50%; }
+.col.is-6 { flex: none; width: 60%; }
+.col.is-7 { flex: none; width: 70%; }
+.col.is-8 { flex: none; width: 80%; }
+.col.is-9 { flex: none; width: 90%; }
+.col.is-10 { flex: none; width: 100%; }
+
+/* --- Main Banner --- */
 .main-banner {
     width: 100%;
-    min-height: 400px;                  /* ensures banner has height */
-    background-size: cover;             /* full width, minimal crop */
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 40px 20px;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* --- Name + Profile Section --- */
+/* Name + Profile */
 .name-title-company {
     display: flex;
-    align-items: center;               /* vertically align profile pic with text */
+    align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 30px;                          /* space between text and image */
+    gap: 30px;
 }
 
-/* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 2rem;                    /* large for desktop */
+    font-size: 2rem;
 }
 
-/* Profile picture block */
 .image-block {
     display: flex;
     align-items: center;
@@ -35,39 +101,64 @@
 }
 
 .profile-pic {
-    height: auto;
-    max-height: 150px;                  /* match text height */
-    width: auto;
+    max-height: 150px;
     max-width: 300px;
     object-fit: cover;
 }
 
+/* --- Text Styles --- */
+.text-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+
+.text-title-company {
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color: #333333;
+}
+
+.text-detail {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #575757;
+}
+
+/* --- Sections --- */
+.primary-info { height: 15%; }
+.secondary-info { height: 8%; }
+.bottom { height: 23%; }
+
+.bg-color-white { background-color: white; }
+.bg-color-grey { background-color: #F2F2F2; }
+
+.button {
+    background-color: #219653;
+    height: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+    line-height: 48px;
+    font-family: 'Muli', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 1200px) {
-    .text-block {
-        font-size: 1.7rem;
-    }
-    .profile-pic {
-        max-height: 120px;
-    }
+    .text-block { font-size: 1.7rem; }
+    .profile-pic { max-height: 120px; }
 }
 
 @media (max-width: 768px) {
     .name-title-company {
-        flex-direction: column;         /* stack text + image */
+        flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 15px;
     }
-    .text-block {
-        font-size: 1.2rem;
-    }
-    .profile-pic {
-        max-height: 100px;
-        max-width: 150px;
-    }
-    .main-banner {
-        min-height: 250px;
-        padding: 20px 10px;
-    }
+    .text-block { font-size: 1.2rem; }
+    .profile-pic { max-height: 100px; max-width: 150px; }
+    .main-banner { min-height: 250px; padding: 20px 10px; }
 }
