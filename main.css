@@ -33,9 +33,10 @@ img {
 }
 
 img.profile-pic {
-	height: 100%;       /* match the height of the text-block */
-    width: auto;        /* maintain aspect ratio */
-    object-fit: cover; 
+	height: 100%;                /* match height of text block */
+    width: auto;                 /* keep aspect ratio */
+    max-width: 200px;            /* prevent too large on desktop */
+    object-fit: cover;
 }
 
 .container {
@@ -117,36 +118,39 @@ img.profile-pic {
 	width: 100%;
 }
 
+/* --- Name + Profile Section --- */
 .name-title-company {
-	display: flex;
-    align-items: stretch; /* make both columns same height */
+    display: flex;
+    align-items: stretch;        /* make text and image columns same height */
+    gap: 20px;                   /* space between text and image */
 }
 
-/* Text block remains normal */
+/* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertically center text */
+    justify-content: center;     /* vertically center text */
 }
 
-/* Image block aligns image to fill height of text block */
+/* Image block */
 .image-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;         /* vertical center */
+    justify-content: center;     /* horizontal center */
 }
 .banner {
 	height: 30%;
 }
 
 .main-banner {
-    position: relative;
     width: 100%;
-    aspect-ratio: 16/5;   /* keeps a nice wide banner ratio */
+    aspect-ratio: 16/5;           /* keeps banner proportional */
     background-image: url('Linkedin Banner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;          /* optional: vertically center row */
 }
 
 
@@ -218,6 +222,12 @@ img.profile-pic {
   }
 @media screen (max-width: 768px) {
 	.main-banner {
-	height: 200px;
+	aspect-ratio: auto;
+    height: 200px; /* fallback for mobile */
 	}
+@media (max-width: 992px) {
+.name-title-company {
+	flex-direction: column;  /* stack on smaller screens */
+	align-items: center;
+
 }
