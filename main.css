@@ -33,9 +33,10 @@ img {
 }
 
 img.profile-pic {
-	height: 100%;                /* match height of text block */
-    width: auto;                 /* keep aspect ratio */
-    max-width: 200px;            /* prevent too large on desktop */
+	height: auto;
+    max-height: 150px;                  /* match text height */
+    width: auto;
+    max-width: 300px;                   /* prevent too wide on desktop */
     object-fit: cover;
 }
 
@@ -121,22 +122,25 @@ img.profile-pic {
 /* --- Name + Profile Section --- */
 .name-title-company {
     display: flex;
-    align-items: stretch;        /* make text and image columns same height */
-    gap: 20px;                   /* space between text and image */
+    align-items: center;               /* vertical align profile pic with text */
+    max-width: 1200px;                 /* constrain width on wide screens */
+    width: 100%;
+    gap: 30px;                     /* space between text and image */
 }
 
 /* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* vertically center text */
+    justify-content: center;
+    font-size: 2rem;   
 }
 
 /* Image block */
 .image-block {
     display: flex;
-    align-items: center;         /* vertical center */
-    justify-content: center;     /* horizontal center */
+    align-items: center;
+    justify-content: center;
 }
 .banner {
 	height: 30%;
@@ -144,13 +148,14 @@ img.profile-pic {
 
 .main-banner {
     width: 100%;
-    aspect-ratio: 16/5;           /* keeps banner proportional */
+    min-height: 400px;                  /* ensure enough vertical space on desktop */
     background-image: url('Linkedin Banner.png');
-    background-size: cover;
+    background-size: cover;             /* fill width, crop minimally */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;          /* optional: vertically center row */
+    justify-content: center;            /* center content horizontally */
+    padding: 40px 20px;
 }
 
 
@@ -208,26 +213,32 @@ img.profile-pic {
 	font-weight: 300;
 }
 
-@media screen and (max-width: 600px) {
-  img.profile-pic {
-    width: 100px;
-    height: 100px;
-  }
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .text-block {
+        font-size: 1.7rem;
+    }
+    .profile-pic {
+        max-height: 120px;
+    }
 }
 
-@media screen and (max-width: 480px) {
-  img.profile-pic {
-    height: 80%;
-    width: 80%;
-  }
-@media screen (max-width: 768px) {
-	.main-banner {
-	aspect-ratio: auto;
-    height: 200px; /* fallback for mobile */
-	}
-@media (max-width: 992px) {
-.name-title-company {
-	flex-direction: column;  /* stack on smaller screens */
-	align-items: center;
-
+@media (max-width: 768px) {
+    .name-title-company {
+        flex-direction: column;         /* stack text + image */
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .text-block {
+        font-size: 1.2rem;
+    }
+    .profile-pic {
+        max-height: 100px;
+        max-width: 150px;
+    }
+    .main-banner {
+        min-height: 250px;
+        padding: 20px 10px;
+    }
 }
