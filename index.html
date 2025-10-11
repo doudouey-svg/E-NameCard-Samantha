@@ -1,109 +1,71 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="main.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:200,300,400,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Muli:200,300" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Namecard</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-
-  <!-- Banner -->
-  <section class="main-banner">
-    <img src="Linkedin Banner.png" alt="Banner Image">
-  </section>
-
-  <!-- Primary Info -->
-  <section class="primary-info">
-    <div class="container">
-      <div class="row name-title-company">
-        <div class="col image-block">
-          <img class="profile-pic" src="Samantha.jpeg" alt="Profile Picture">
+    <div class="card">
+        <div class="banner" style="background-image: url('assets/Linkedin Banner.png'); background-size: cover; background-position: center;"></div>
+        
+        <div class="profile-section">
+            <img src="assets/Samantha.jpeg" alt="Profile Picture" class="profile-img">
+            <div class="name-section">
+                <div class="name">Samantha Lee</div>
+                <div class="title">Technology Development Manager</div>
+            </div>
         </div>
-        <div class="col text-block">
-          <p class="text-name">Samantha Lee</p>
-          <p class="text-title-company">Technology Development Manager</p>
-          <p class="text-title-company">Pollisum</p>
+        
+        <div class="card-body">
+            <div class="info-item">
+                <div class="icon">📧</div>
+                <div class="info-text">
+                    <div class="info-label">Email</div>
+                    <div class="info-value"><a href="mailto:samantha@pollisum.com">samantha@pollisum.com</a></div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">📱</div>
+                <div class="info-text">
+                    <div class="info-label">Phone</div>
+                    <div class="info-value"><a href="tel:+65 91377584">+65 91377584</a></div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">🌐</div>
+                <div class="info-text">
+                    <div class="info-label">Website</div>
+                    <div class="info-value"><a href="https://www.pollisum.com" target="_blank">pollisum.com</a></div>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">📍</div>
+                <div class="info-text">
+                    <div class="info-label">Location</div>
+                    <div class="info-value">https://www.google.com/maps/place/Pollisum+Engineering+Pte+Ltd/@1.4697222,103.8085362,17z/</div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="download-btn" onclick="downloadVCard()">
+                    <span>📥</span>
+                    <span>Save Contact</span>
+                </button>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/pollisum-engineering-pte-ltd" class="social-btn" title="LinkedIn">💼</a>
+                <a href="#" class="social-btn" title="GitHub">🐙</a>
+                <a href="#" class="social-btn" title="Twitter">🐦</a>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Secondary Info -->
-  <section class="secondary-info">
-    <div class="container">
-      <a href="mailto:samantha@pollisum.com">
-        <div class="row detail">
-          <div class="col icon-col">
-            <img src="assets/icon-email.svg" alt="Email Icon">
-          </div>
-          <div class="col text-col">
-            <p class="text-detail">samantha@pollisum.com</p>
-          </div>
-          <div class="col icon-col">
-            <img src="assets/right-arrow.svg" alt="Right Arrow">
-          </div>
-        </div>
-      </a>
-
-      <a href="tel:+6591377584">
-        <div class="row detail">
-          <div class="col icon-col">
-            <img src="assets/icon-phone.svg" alt="Phone Icon">
-          </div>
-          <div class="col text-col">
-            <p class="text-detail">(+65) 9137 7584</p>
-          </div>
-          <div class="col icon-col">
-            <img src="assets/right-arrow.svg" alt="Right Arrow">
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.pollisum.com">
-        <div class="row detail">
-          <div class="col icon-col">
-            <img src="assets/icon-website.svg" alt="Website Icon">
-          </div>
-          <div class="col text-col">
-            <p class="text-detail">pollisum.com</p>
-          </div>
-          <div class="col icon-col">
-            <img src="assets/right-arrow.svg" alt="Right Arrow">
-          </div>
-        </div>
-      </a>
-
-      <a href="https://www.google.com/maps/place/Pollisum+Engineering+Pte+Ltd/@1.4697222,103.8085362,17z/">
-        <div class="row detail">
-          <div class="col icon-col">
-            <img src="assets/icon-address.svg" alt="Address Icon">
-          </div>
-          <div class="col text-col">
-            <p class="text-detail">Pollisum</p>
-          </div>
-          <div class="col icon-col">
-            <img src="assets/right-arrow.svg" alt="Right Arrow">
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- Download Button -->
-  <section class="bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col is-5">
-          <a href="user.vcf" class="button">Download</a>
-        </div>
-        <div class="col"></div>
-      </div>
-    </div>
-  </section>
-
+    <script src="vcard.js"></script>
 </body>
 </html>
